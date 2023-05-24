@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Shopping Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .card{
+            height: 100%;
+        }
+        .card-img-top {
+            width: 348px;
+            height: 348px;
+        }
+
+        .card-img-top.fade {
+            opacity: 0.5;
+        }
+
+        .card-body{
+            background-color: rgb(225, 225, 225);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .navbar-brand.name {
+            border-right: 1px solid gray;
+            padding-right: 10px;
+        }
+
+        .nav-link:hover {
+            color: orange !important;
+        }
+
+        .navbar-brand.name:hover{
+            color: orange !important;
+        }
+
+        .btn-buy{
+            background-color: orange;
+            border-color: rgb(236, 156, 8); 
+            color: white;  
+        }
+
+        .btn-buy:hover{
+            background-color: rgb(207, 139, 14);
+            border-color: rgb(174, 115, 5);
+            color:rgb(234, 234, 234)
+        }
+
+        .bottom-bar{
+            background-color: rgb(248, 249, 250);
+            padding-bottom: 2px;
+            padding-top : 5px;
+            border-top: 1px solid gray;
+        }
+
+        .products{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .credits{
+            text-align: right;
+            position: absolute;
+            right: 0;
+            font-size: small;
+        }
+
+        .credits a{
+            color: gray;
+        }
+
+        .row.product{
+            background-color: white;
+        }
+
+    </style>
+
+  </head>
+<body>
+    <script src="./scroll.js"></script>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-bar">
+        <!--Making the logo image and the company title appear on the navbar-->
+        <a href="#"><img class="navbar-brand logo" src="./Images/non-copyright logo-only.jpg" height="50"></a>
+        <a class="navbar-brand name" href="#" >Ethan's Tech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Creating the button navigation options-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" onclick="scrollToElement('#contact-us')">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!--A nice peach coloured seperator between header and products-->
+    <div style="background-color: rgb(249,204,157); height: 5px;">
+        <span></span>
+    </div>
+
+    <!-- Shopping Items -->
+    <div class="container products">
+        <!--Row 1-->
+        <div class="row product">
+            <!--Item 1-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Phanteks Fan/Phanteks PH-F120T30_BG T30 120mm PWM Grey Case Fan.jpg" alt="./Images/Phanteks Fan/Phanteks PH-F120T30_BG T30 120mm PWM Grey Case Fan2.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Phanteks PH-F120T30_BG T30 120mm PWM Grey Case Fan</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R499.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 2-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Zotac 3060/Zotac GeForce RTX 3060 Gaming Twin Edge ZT-A30600E-10M 12GB GDDR6.jpg" alt="./Images/Zotac 3060/Zotac GeForce RTX 3060 Gaming Twin Edge ZT-A30600E-10M 12GB GDDR62.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Zotac GeForce RTX 3060 Gaming Twin Edge ZT-A30600E-10M 12GB GDDR6</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R7,399.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 3-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Intel 13900k/Intel BX8071513900K Core i9-13900K 24-Core 5.80Ghz Raptor Lake Socket LGA1700.jpg" alt="./Images/Intel 13900k/Intel BX8071513900K Core i9-13900K 24-Core 5.80Ghz Raptor Lake Socket LGA17002.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Intel BX8071513900K Core i9-13900K 24-Core 5.80Ghz Raptor Lake Socket LGA1700</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R12,799.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+  
+        <!--Row 2-->
+        <div class="row product" style="padding-top: 10px;">
+            <!--Item 1-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/G.SKILL RAM/G.SKILL F-56400J3239F48GX2-TZ5RK Trident Z5 RGB 96GB.jpg" alt="./Images/G.SKILL RAM/G.SKILL F-56400J3239F48GX2-TZ5RK Trident Z5 RGB 96GB2.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">G.SKILL F-56400J3239F48GX2-TZ5RK Trident Z5 RGB 96GB</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R10,568.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 2-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/FSP PSU/FSP HG2-1000-Gen5 Hydro G Pro ATX3.0 (2023) 1000W 80 Plus Gold PCIe 5.0 Fully.jpg" alt="./Images/FSP PSU/FSP HG2-1000-Gen5 Hydro G Pro ATX3.0 (2023) 1000W 80 Plus Gold PCIe 5.0 Fully2.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">FSP HG2-1000-Gen5 Hydro G Pro ATX3.0 (2023) 1000W 80 Plus Gold PCIe 5.0 Fully</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R3,474.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 3-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Samsung SSD/Samsung SSD.JPG" alt="./Images/Samsung SSD/Samsung SSD2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Samsung MZ-V7S2T0BW 970 EVO Plus 2TB NVMe M.2 2280 PCI-Express 3.0 x4 Solid State Drive</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R2,799.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!--Row 3-->
+        <div class="row product" style="padding-top: 10px;">
+            <!--Item 1-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/DeepCool Chassis/DeepCool DP-ATX-MATREXX55 Matrexx 55 V3 Tempered Glass Clear RGB Black ATX Mid-Tower Chassis.JPG" alt="./Images/DeepCool Chassis/DeepCool DP-ATX-MATREXX55 Matrexx 55 V3 Tempered Glass Clear RGB Black ATX Mid-Tower Chassis2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">DeepCool DP-ATX-MATREXX55 Matrexx 55 V3 Tempered Glass Clear RGB Black ATX Mid-Tower Chassis</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R953.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 2-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Dell Laptop/Dell Laptop.JPG" alt="./Images/Dell Laptop/Dell Laptop2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dell Laptop/Dell XPS 13 Plus 9320 Intel Core i7-1260P 4.70GHz 12-Core 13.4 3.5K(3456x2160) OLED Touchscreen 32GB(On-Board) LPDDR5-5200MHz 1TB M.2 NVMe SSD Windows 11 Pro Graphite Laptop</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R49,342.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 3-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Dell Monitor/Dell S2421HN 24 Full HD (1920x1080) 75Hz 4ms IPS FreesSync Desktop Monitor.jpg" alt="./Images/Dell Monitor/Dell S2421HN 24 Full HD (1920x1080) 75Hz 4ms IPS FreesSync Desktop Monitor2.jpg">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dell S2421HN 24" Full HD (1920x1080) 75Hz 4ms IPS FreesSync Desktop Monitor</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R2,749.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!--Row 4-->
+        <div class="row product" style="padding-top: 10px;">
+            <!--Item 1-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Seagate HDD/Seagate HDD.JPG" alt="./Images/Seagate HDD/Seagate HDD2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Seagate ST6000DM003 Barracuda 6TB 5400RPM SATA 6Gb/s 256MB Cache 3.5" Internal Hard Drive</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R2,599.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 2-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/ID Cooling/ID Cooler.JPG" alt="./Images/ID Cooling/ID Cooler2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">ID-Cooling SE-225-XT Basic 120mm Black PWM Premium High-End CPU Cooler</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R569.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Item 3-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./Images/Epos Headphones/Epos Headphones.JPG" alt="./Images/Epos Headphones/Epos Headphones2.JPG">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">EPOS 1001166 H6PRO Over-Ear Open Back Wired Professional Gaming Headset & GSX 300 External Audio Card Audio Bundle</h5>
+                        </div>
+                        <div>
+                            <p class="card-text"><strong>R3,299.00</strong></p>
+                            <a href="#" class="btn btn-buy">Add to Cart</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>        
+
+    <!--A nice peach coloured seperator between products and footer-->
+    <div style="background-color: rgb(249,204,157); height: 5px;">
+        <span style="padding-top: 50px;"></span>
+    </div>
+
+    <!--Footer-->
+    <div>
+        <footer class="footer bg-light" id="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6" style="padding-top: 10px;">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group col-md-6" style="padding-top: 10px;">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputMessage">Message</label>
+                                <textarea class="form-control" id="inputMessage" rows="3" placeholder="Enter your message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                    <div class="col-md-4" style="padding-top: 10px;">
+                        <h4>Contact Us</h4>
+                        <p>123 Main St<br> Cape Town, South Africa<br> 061 372 7429</p>
+                        <img src="./Images/non-copyright logo.jpg" width="150" style="padding-bottom: 5px;">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>        
+    <div id="bottom-page" style="background-color: rgb(248, 249, 250); padding-top: 5px;">
+        <div class="container bottom-bar">
+            <div class="row justify-content-center">
+                <div class="col-md-1">
+                    <a href="#" onclick="scrollToElement('#nav-bar')" style="color: rgba(0,0,0,.5);" >Home</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="container credits">
+        <a href="https://wootware.co.za/" target="_blank">Images and prices acquired from WootWare Computers.</a>
+    </div>
+</body>
